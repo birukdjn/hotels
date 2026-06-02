@@ -1,39 +1,25 @@
 package com.gobet.hotels.controller;
 
-import com.gobet.hotels.dto.partner.PartnerApplicationRequest;
-import com.gobet.hotels.entity.PartnerApplication;
-import com.gobet.hotels.service.PartnerService;
+import com.gobet.hotels.dto.partner.CreatePartnerApplicationRequest;
+import com.gobet.hotels.service.PartnerApplicationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
-@Tag(name = "Partner Controller", description = "Partner APIs")
+@Tag(name = "Partner Application")
 @RestController
-@RequestMapping("/api/partners")
+@RequestMapping("/api/partner-applications")
 @RequiredArgsConstructor
-public class PartnerController {
+public class PartnerApplicationController {
 
-    private final PartnerService partnerService;
+    private final PartnerApplicationService service;
 
-    @PostMapping("/apply")
-    public PartnerApplication apply(@RequestBody PartnerApplicationRequest request) {
-        return partnerService.submitApplication(request);
-    }
-
-    @GetMapping("/applications")
-    public List<PartnerApplication> getAll() {
-        return partnerService.getAllApplications();
-    }
-
-    @PostMapping("/approve/{id}")
-    public void approve(@PathVariable Long id) {
-        partnerService.approve(id);
-    }
-
-    @PostMapping("/reject/{id}")
-    public void reject(@PathVariable Long id) {
-        partnerService.reject(id);
+    @PostMapping
+    public String apply(
+            @Valid @RequestBody CreatePartnerApplicationRequest request
+    ) {
+        service.createApplication(request);
+        return "Application submitted successfully";
     }
 }

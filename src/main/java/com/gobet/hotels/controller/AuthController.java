@@ -56,9 +56,4 @@ public class AuthController {
     ) {
         return authService.changePassword(authentication, request);
     }
-
-    @PostMapping("/set-password")
-    public String setPassword(@RequestBody SetPasswordRequest request) {
-        return authService.(request);
-    }
 }

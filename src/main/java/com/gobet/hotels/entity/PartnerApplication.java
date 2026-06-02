@@ -12,19 +12,38 @@ import lombok.Setter;
 @Table(name = "partner_applications")
 public class PartnerApplication extends BaseEntity {
 
-    private String fullName;
-    private String email;
-    private String phone;
+    @Column(nullable = false)
+    private String ContactFirstName;
 
+    @Column(nullable = false)
+    private String ContactLastName;
+
+    @Column(nullable = false)
+    private String email;
+
+    @Column(nullable = false)
+    private String phoneNumber;
+
+    @Column(nullable = false)
     private String hotelName;
-    private String businessRegistrationNumber;
+
+    @Column(nullable = false)
     private String tinNumber;
+
+    @Column(nullable = false)
+    private String businessRegistrationNumber;
 
     private String logoUrl;
 
-    @Lob
-    private String documents; // JSON or file URLs
+    private String businessLicenseUrl;
+
+    private String address;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private PartnerApplicationStatus status = PartnerApplicationStatus.PENDING;
+
+    private String reviewNote;
+
+    private String rejectionReason;
 }
