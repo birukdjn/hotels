@@ -1,6 +1,6 @@
-package com.gobet.hotelhub.entity;
-import com.gobet.hotelhub.entity.common.BaseEntity;
-import com.gobet.hotelhub.enums.PaymentMethod;
+package com.gobet.hotels.entity;
+import com.gobet.hotels.entity.common.BaseEntity;
+import com.gobet.hotels.enums.PaymentMethod;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

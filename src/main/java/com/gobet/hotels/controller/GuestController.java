@@ -1,13 +1,15 @@
-package com.gobet.hotelhub.controller;
+package com.gobet.hotels.controller;
 
-import com.gobet.hotelhub.dto.guest.*;
-import com.gobet.hotelhub.service.GuestService;
+import com.gobet.hotels.dto.guest.*;
+import com.gobet.hotels.service.GuestService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Guest Controller", description = "Guest APIs")
 @RestController
 @RequestMapping("/api/guests")
 @RequiredArgsConstructor

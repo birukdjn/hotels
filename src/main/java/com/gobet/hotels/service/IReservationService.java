@@ -1,7 +1,7 @@
-package com.gobet.hotelhub.service;
+package com.gobet.hotels.service;
 
-import com.gobet.hotelhub.dto.reservation.CreateReservationRequest;
-import com.gobet.hotelhub.dto.reservation.ReservationResponse;
+import com.gobet.hotels.dto.reservation.CreateReservationRequest;
+import com.gobet.hotels.dto.reservation.ReservationResponse;
 
 import java.util.List;
 

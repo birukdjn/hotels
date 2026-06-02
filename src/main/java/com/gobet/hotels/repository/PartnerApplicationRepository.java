@@ -1,4 +1,7 @@
 package com.gobet.hotels.repository;
 
-public class PartnerApplicationRepository {
+import com.gobet.hotels.entity.PartnerApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PartnerApplicationRepository extends JpaRepository<PartnerApplication, Long> {
 }

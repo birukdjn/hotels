@@ -1,4 +1,4 @@
-package hotelhub.config;
+package com.gobet.hotels.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -9,10 +9,11 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfig {
 
     @Bean
-    public OpenAPI hotelHubApi() {
+    public OpenAPI hotelsApi() {
         return new OpenAPI()
+
                 .info(new Info()
-                        .title("HotelHub API")
+                        .title("Hotels API")
                         .version("1.0")
                         .description("Multi-hotel management platform"));
     }

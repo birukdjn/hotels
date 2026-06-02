@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.enums;
+package com.gobet.hotels.enums;
 
 public enum UserRole {
     SUPER_ADMIN,

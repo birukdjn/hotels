@@ -1,6 +1,6 @@
-package com.gobet.hotelhub.entity.common;
+package com.gobet.hotels.entity.common;
 
-import com.gobet.hotelhub.entity.Hotel;
+import com.gobet.hotels.entity.Hotel;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -13,6 +13,6 @@ public abstract class HotelAwareEntity extends BaseEntity {
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hotel_id", nullable = false)
+    @JoinColumn(name = "hotel_id", nullable = true)
     private Hotel hotel;
 }

@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.dto.hotel;
+package com.gobet.hotels.dto.hotel;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

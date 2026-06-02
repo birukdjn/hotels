@@ -1,6 +1,6 @@
-package com.gobet.hotelhub.repository;
+package com.gobet.hotels.repository;
 
-import com.gobet.hotelhub.entity.Reservation;
+import com.gobet.hotels.entity.Reservation;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

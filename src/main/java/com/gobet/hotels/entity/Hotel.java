@@ -1,5 +1,5 @@
-package com.gobet.hotelhub.entity;
-import com.gobet.hotelhub.entity.common.BaseEntity;
+package com.gobet.hotels.entity;
+import com.gobet.hotels.entity.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

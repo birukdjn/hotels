@@ -1,6 +1,6 @@
-package com.gobet.hotelhub.repository;
+package com.gobet.hotels.repository;
 
-import com.gobet.hotelhub.entity.Hotel;
+import com.gobet.hotels.entity.Hotel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HotelRepository extends JpaRepository<Hotel, Long> {

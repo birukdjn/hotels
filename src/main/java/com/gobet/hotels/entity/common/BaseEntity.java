@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.entity.common;
+package com.gobet.hotels.entity.common;
 
 import jakarta.persistence.*;
 import lombok.Getter;

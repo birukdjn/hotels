@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.exception;
+package com.gobet.hotels.exception;
 
 public class NotFoundException extends RuntimeException{
     public NotFoundException(String message) {

@@ -1,11 +1,11 @@
-package com.gobet.hotelhub.service;
+package com.gobet.hotels.service;
 
-import com.gobet.hotelhub.dto.guest.*;
-import com.gobet.hotelhub.entity.Guest;
-import com.gobet.hotelhub.entity.Hotel;
-import com.gobet.hotelhub.exception.NotFoundException;
-import com.gobet.hotelhub.repository.GuestRepository;
-import com.gobet.hotelhub.repository.HotelRepository;
+import com.gobet.hotels.dto.guest.*;
+import com.gobet.hotels.entity.Guest;
+import com.gobet.hotels.entity.Hotel;
+import com.gobet.hotels.exception.NotFoundException;
+import com.gobet.hotels.repository.GuestRepository;
+import com.gobet.hotels.repository.HotelRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

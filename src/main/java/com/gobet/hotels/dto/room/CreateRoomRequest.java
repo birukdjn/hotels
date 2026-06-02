@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.dto.room;
+package com.gobet.hotels.dto.room;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,6 +1,6 @@
-package com.gobet.hotelhub.entity;
-import com.gobet.hotelhub.entity.common.HotelAwareEntity;
-import com.gobet.hotelhub.enums.ReservationStatus;
+package com.gobet.hotels.entity;
+import com.gobet.hotels.entity.common.HotelAwareEntity;
+import com.gobet.hotels.enums.ReservationStatus;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

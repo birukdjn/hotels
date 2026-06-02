@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.dto.reservation;
+package com.gobet.hotels.dto.reservation;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

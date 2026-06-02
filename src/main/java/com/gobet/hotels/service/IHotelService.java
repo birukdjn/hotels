@@ -1,6 +1,6 @@
-package com.gobet.hotelhub.service;
+package com.gobet.hotels.service;
 
-import com.gobet.hotelhub.dto.hotel.*;
+import com.gobet.hotels.dto.hotel.*;
 
 import java.util.List;
 

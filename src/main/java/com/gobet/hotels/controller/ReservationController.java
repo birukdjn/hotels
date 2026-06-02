@@ -1,14 +1,16 @@
-package com.gobet.hotelhub.controller;
+package com.gobet.hotels.controller;
 
-import com.gobet.hotelhub.dto.reservation.CreateReservationRequest;
-import com.gobet.hotelhub.dto.reservation.ReservationResponse;
-import com.gobet.hotelhub.service.IReservationService;
+import com.gobet.hotels.dto.reservation.CreateReservationRequest;
+import com.gobet.hotels.dto.reservation.ReservationResponse;
+import com.gobet.hotels.service.IReservationService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Reservation Controller", description = "Reservation APIs")
 @RestController
 @RequestMapping("/api/reservations")
 @RequiredArgsConstructor

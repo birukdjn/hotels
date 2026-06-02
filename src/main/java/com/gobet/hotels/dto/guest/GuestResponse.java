@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.dto.guest;
+package com.gobet.hotels.dto.guest;
 
 import lombok.Getter;
 import lombok.Setter;

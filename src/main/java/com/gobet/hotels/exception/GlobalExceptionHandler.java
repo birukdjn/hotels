@@ -1,4 +1,4 @@
-package com.gobet.hotelhub.exception;
+package com.gobet.hotels.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
