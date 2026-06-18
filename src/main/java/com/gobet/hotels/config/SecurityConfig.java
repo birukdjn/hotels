@@ -72,6 +72,12 @@ public class SecurityConfig {
                                 "/api/admin/**"
                         ).hasRole(RoleConstants.SUPER_ADMIN)
 
+                        // USER MANAGEMENT APIs
+                        .requestMatchers(
+                                "/api/users",
+                                "/api/users/**"
+                        ).hasAnyRole(RoleConstants.SUPER_ADMIN, RoleConstants.HOTEL_ADMIN)
+
                         // METADATA (Regions, Zones, Cities) — PUBLIC READ
                         .requestMatchers(
                                 HttpMethod.GET,
