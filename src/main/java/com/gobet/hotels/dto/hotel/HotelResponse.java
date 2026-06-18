@@ -12,6 +12,7 @@ public class HotelResponse {
     private String email;
     private String phone;
     private String address;
+    private String city;
     private String logoUrl;
     private Boolean active;
 }

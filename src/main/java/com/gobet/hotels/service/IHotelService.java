@@ -10,7 +10,7 @@ public interface IHotelService {
 
     HotelResponse getById(Long id);
 
-    List<HotelResponse> getAll();
+    List<HotelResponse> getAll(String city);
 
     HotelResponse update(Long id, UpdateHotelRequest request);
 

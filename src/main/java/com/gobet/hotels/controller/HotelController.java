@@ -28,8 +28,8 @@ public class HotelController {
     }
 
     @GetMapping
-    public List<HotelResponse> getAll() {
-        return hotelService.getAll();
+    public List<HotelResponse> getAll(@RequestParam(required = false) String city) {
+        return hotelService.getAll(city);
     }
 
     @PutMapping("/{id}")

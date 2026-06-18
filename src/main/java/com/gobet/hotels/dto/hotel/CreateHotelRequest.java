@@ -19,5 +19,7 @@ public class CreateHotelRequest {
 
     private String address;
 
+    private String city;
+
     private String logoUrl;
 }

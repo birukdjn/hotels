@@ -24,6 +24,7 @@ public class HotelService implements IHotelService {
         hotel.setEmail(request.getEmail());
         hotel.setPhone(request.getPhone());
         hotel.setAddress(request.getAddress());
+        hotel.setCity(request.getCity());
         hotel.setLogoUrl(request.getLogoUrl());
         hotel.setActive(true);
 
@@ -40,10 +41,14 @@ public class HotelService implements IHotelService {
     }
 
     @Override
-    public List<HotelResponse> getAll() {
-        return hotelRepository.findAll()
-                .stream()
-                .filter(h -> Boolean.FALSE.equals(h.getDeleted()))
+    public List<HotelResponse> getAll(String city) {
+        List<Hotel> hotels;
+        if (city != null && !city.trim().isEmpty()) {
+            hotels = hotelRepository.findByCityIgnoreCaseAndDeletedFalse(city);
+        } else {
+            hotels = hotelRepository.findByDeletedFalse();
+        }
+        return hotels.stream()
                 .map(this::map)
                 .collect(Collectors.toList());
     }
@@ -58,6 +63,7 @@ public class HotelService implements IHotelService {
         hotel.setEmail(request.getEmail());
         hotel.setPhone(request.getPhone());
         hotel.setAddress(request.getAddress());
+        hotel.setCity(request.getCity());
         hotel.setLogoUrl(request.getLogoUrl());
         hotel.setActive(request.getActive());
 
@@ -82,6 +88,7 @@ public class HotelService implements IHotelService {
         res.setEmail(hotel.getEmail());
         res.setPhone(hotel.getPhone());
         res.setAddress(hotel.getAddress());
+        res.setCity(hotel.getCity());
         res.setLogoUrl(hotel.getLogoUrl());
         res.setActive(hotel.getActive());
         return res;

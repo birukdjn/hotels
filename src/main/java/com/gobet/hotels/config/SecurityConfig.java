@@ -33,7 +33,8 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/api/auth/**",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+                                "/api/bookings/public"
                         ).permitAll()
 
                         // HOTELS — PUBLIC READ
@@ -41,6 +42,13 @@ public class SecurityConfig {
                                 HttpMethod.GET,
                                 "/api/hotels",
                                 "/api/hotels/*"
+                        ).permitAll()
+
+                        // ROOMS — PUBLIC READ
+                        .requestMatchers(
+                                HttpMethod.GET,
+                                "/api/rooms/hotel/*",
+                                "/api/rooms/*"
                         ).permitAll()
 
                         // HOTELS — SUPER ADMIN ONLY
@@ -62,6 +70,46 @@ public class SecurityConfig {
                         // ADMIN APIs
                         .requestMatchers(
                                 "/api/admin/**"
+                        ).hasRole(RoleConstants.SUPER_ADMIN)
+
+                        // METADATA (Regions, Zones, Cities) — PUBLIC READ
+                        .requestMatchers(
+                                HttpMethod.GET,
+                                "/api/regions",
+                                "/api/regions/*",
+                                "/api/zones",
+                                "/api/zones/*",
+                                "/api/cities",
+                                "/api/cities/*"
+                        ).permitAll()
+
+                        // METADATA — SUPER ADMIN WRITE
+                        .requestMatchers(
+                                HttpMethod.POST,
+                                "/api/regions",
+                                "/api/zones",
+                                "/api/cities"
+                        ).hasRole(RoleConstants.SUPER_ADMIN)
+
+                        .requestMatchers(
+                                HttpMethod.PUT,
+                                "/api/regions/*",
+                                "/api/zones/*",
+                                "/api/cities/*"
+                        ).hasRole(RoleConstants.SUPER_ADMIN)
+
+                        .requestMatchers(
+                                HttpMethod.PATCH,
+                                "/api/regions/*",
+                                "/api/zones/*",
+                                "/api/cities/*"
+                        ).hasRole(RoleConstants.SUPER_ADMIN)
+
+                        .requestMatchers(
+                                HttpMethod.DELETE,
+                                "/api/regions/*",
+                                "/api/zones/*",
+                                "/api/cities/*"
                         ).hasRole(RoleConstants.SUPER_ADMIN)
 
                         // EVERYTHING ELSE

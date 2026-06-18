@@ -19,6 +19,8 @@ public class Hotel extends BaseEntity {
 
     private String address;
 
+    private String city;
+
     private String logoUrl;
 
     @Column(nullable = false)
