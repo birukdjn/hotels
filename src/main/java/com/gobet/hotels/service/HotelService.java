@@ -26,6 +26,7 @@ public class HotelService implements IHotelService {
         hotel.setAddress(request.getAddress());
         hotel.setCity(request.getCity());
         hotel.setLogoUrl(request.getLogoUrl());
+        hotel.setImageUrl(request.getImageUrl());
         hotel.setActive(true);
 
         return map(hotelRepository.save(hotel));

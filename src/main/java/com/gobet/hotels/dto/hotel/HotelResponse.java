@@ -14,5 +14,6 @@ public class HotelResponse {
     private String address;
     private String city;
     private String logoUrl;
+    private String image;
     private Boolean active;
 }

@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -22,6 +24,8 @@ public class Hotel extends BaseEntity {
     private String city;
 
     private String logoUrl;
+
+    private String ImageUrl;
 
     @Column(nullable = false)
     private Boolean active = true;

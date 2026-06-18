@@ -17,9 +17,17 @@ public class CreateHotelRequest {
     @Email(message = "Invalid email format")
     private String email;
 
-    private String address;
+    @NotBlank(message = "Region is required")
+    private String Region;
 
+    @NotBlank(message = "Zone is required")
+    private String Zone;
+
+    @NotBlank(message = "City is required")
     private String city;
 
+    private String address;
+
+    private String ImageUrl;
     private String logoUrl;
 }
